@@ -1,4 +1,4 @@
-** Local Set Up **
+**Local Set Up**
 Created .env files for each backend services and backend. 
 Installed dependencies by running **npm install** in root location of each service
 Started Services again by running **npm start** in root location of each service
@@ -56,12 +56,56 @@ Create deployment.yaml, service.yaml, configmap.yaml and secrete.yaml for each s
 1 more file for mongo db and 1 yaml file was created to build eks cluster. Refer the main branch's k8s folder for same.
 Once created aplly them one by one or all in one go using below command:
 
+kubectl apply -f k8s/mongo.yaml
+kubectl apply -f k8s/user-service.yaml
+kubectl apply -f k8s/product-service.yaml
+kubectl apply -f k8s/cart-service.yaml
+kubectl apply -f k8s/order-service.yaml
+kubectl apply -f k8s/frontend.yaml
+
+OR
+
 kubectl apply -f k8s/
+
 
 **On Docker-Desktop K8s Cluster**
 
-**On EKS Cluster**
+<img width="1477" height="223" alt="image" src="https://github.com/user-attachments/assets/179c8ba5-1839-4f2a-ac70-23e1195932f7" />
 
+<img width="1480" height="235" alt="image" src="https://github.com/user-attachments/assets/89f589cb-e912-43fc-9194-3529bc954c7f" />
+
+Now, if external IP not defined then we can use **http://kubernetes.docker.internal:<nodePort>**  to access url
+
+<img width="1913" height="980" alt="image" src="https://github.com/user-attachments/assets/80db1efe-788e-4507-920a-6b0997c18f78" />
+
+
+**On EKS Cluster**
+Create eks cluster using
+
+eksctl create cluster -f eks.yaml
+or 
+eksctl create cluster --name ecom-store --region us-west-2 --nodegroup-name standard-workers --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 3
+New EKS is ready
+
+<img width="1446" height="491" alt="image" src="https://github.com/user-attachments/assets/a8fe6379-a811-42d1-9258-3b06bb4765aa" />
+<img width="1472" height="271" alt="image" src="https://github.com/user-attachments/assets/36e3a79e-11a4-4b80-a866-e1e83d3214fb" />
+
+Switch to newly created cluster and Deploy all pods
+kubectl config use-context amol.khetan@gmail.com@ecom-store.us-west-2.eksctl.io 
+
+<img width="1482" height="440" alt="image" src="https://github.com/user-attachments/assets/afcb54d8-1d85-45c3-9458-e5f23cc635f8" />
+
+<img width="1474" height="79" alt="image" src="https://github.com/user-attachments/assets/c9d61ade-bf35-4720-ac7c-996c3976d2bb" />
+
+<img width="1482" height="433" alt="image" src="https://github.com/user-attachments/assets/7e9f6f92-ec73-4073-aa57-1f85e45144fb" />
+
+
+Access URL using LB endpoint
+
+<img width="1914" height="821" alt="image" src="https://github.com/user-attachments/assets/44defb5f-d588-4b10-a49f-bda182d803f1" />
+
+
+**Pipeline**
 
 
 
