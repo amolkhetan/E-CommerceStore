@@ -106,6 +106,18 @@ Access URL using LB endpoint
 
 
 **Pipeline**
+Created Job in jenkins and added updated script to clone the code, build and push docker image to docker hub, connect to eks cluster and deploy code.
+
+<img width="1490" height="610" alt="image" src="https://github.com/user-attachments/assets/a74d76de-c92e-4f7a-b16b-2c34dd1c847c" />
+
+<img width="1902" height="373" alt="image" src="https://github.com/user-attachments/assets/623ceceb-65a9-4b27-ab2d-2c0f2a1b0cf6" />
+
+<img width="1472" height="238" alt="image" src="https://github.com/user-attachments/assets/8ddf46f8-3f15-4609-867b-17290efdc468" />
+
+Deployment went on hold due to lack of nodes
+<img width="1477" height="517" alt="image" src="https://github.com/user-attachments/assets/61b4fb26-ef9e-4d01-bf7a-b06f99e7a338" />
+
+
 
 
 
