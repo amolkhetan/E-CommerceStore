@@ -5,8 +5,8 @@ pipeline {
     DOCKER_BUILDKIT = '0'
     AWS_REGION = 'us-west-2'
     EKS_CLUSTER_NAME = 'ecom-store'
-    AWS_ACCESS_KEY_ID = 'AKIA6GBMCU7ZOXRITKGR'
-    AWS_SECRET_ACCESS_KEY = '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'
+    AWS_ACCESS_KEY_ID = 'add ur key'
+    AWS_SECRET_ACCESS_KEY = 'add ur key'
   }
 
   stages {
