@@ -18,7 +18,10 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: ubuntu-latest
+      #vmImage: ubuntu-latest
+      name: Batch11  # or your custom pool name
+      demands:
+        - agent.name -equals Batch11
     steps:
     - task: Docker@2
       displayName: Build an image
