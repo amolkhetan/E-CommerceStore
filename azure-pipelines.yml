@@ -19,9 +19,9 @@ stages:
     displayName: Build
     pool:
       #vmImage: ubuntu-latest
-      name: Batch11  # or your custom pool name
+      name: Default  # or your custom pool name
       demands:
-        - agent.name -equals Batch11
+        - agent.name -equals KRISHNA
     steps:
     - task: Docker@2
       displayName: Build an image
